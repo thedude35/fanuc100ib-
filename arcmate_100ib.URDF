@@ -1,0 +1,391 @@
+<robot
+  name="arcmate_100ib">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00052373 0.10379 -0.0096234"
+        rpy="0 0 0" />
+      <mass
+        value="14.218" />
+      <inertia
+        ixx="0.13909"
+        ixy="1.9885E-05"
+        ixz="-0.00091247"
+        iyy="0.16594"
+        iyz="-0.00069285"
+        izz="0.12327" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arcmate_100ib/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arcmate_100ib/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="5.94486497849595E-05 -0.0289480496599382 0.0382093514170577"
+        rpy="0 0 0" />
+      <mass
+        value="6.06824479127329" />
+      <inertia
+        ixx="0.0706613106919516"
+        ixy="-0.00352568940450208"
+        ixz="-0.00532970606721033"
+        iyy="0.0592638139390138"
+        iyz="0.021836768029158"
+        izz="0.0485216637348945" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arcmate_100ib/meshes/Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arcmate_100ib/meshes/Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="revolute">
+    <origin
+      xyz="0 0.32185 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-5.93"
+      upper="5.93"
+      effort="0"
+      velocity="2.62" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.033851619502209 0.251391913691937 0.00792718167936035"
+        rpy="0 0 0" />
+      <mass
+        value="3.82885410047434" />
+      <inertia
+        ixx="0.166098300499498"
+        ixy="0.00264362097563414"
+        ixz="0.000117517489304829"
+        iyy="0.00752591245718578"
+        iyz="0.00664075520545348"
+        izz="0.160353059145004" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arcmate_100ib/meshes/Link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arcmate_100ib/meshes/Link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="revolute">
+    <origin
+      xyz="-0.123 0.095035 0.15298"
+      rpy="0 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-436"
+      upper="4.36"
+      effort="0"
+      velocity="2.79" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="0.0702160706948654 0.0652175523402114 0.0855172546043713"
+        rpy="0 0 0" />
+      <mass
+        value="1.41185396478286" />
+      <inertia
+        ixx="0.00412049845298404"
+        ixy="0.000731017167324002"
+        ixz="0.000540980984524523"
+        iyy="0.00490670054640195"
+        iyz="0.00088643216505779"
+        izz="0.00660428961313496" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arcmate_100ib/meshes/Link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arcmate_100ib/meshes/Link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3"
+    type="revolute">
+    <origin
+      xyz="0.075323 0.59831 0.023114"
+      rpy="0 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-5.6"
+      upper="5.6"
+      effort="0"
+      velocity="2.97" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="-0.00211953661024432 -0.00255200131966171 0.0350241159720591"
+        rpy="0 0 0" />
+      <mass
+        value="1.53026110033817" />
+      <inertia
+        ixx="0.0125551858857666"
+        ixy="3.21740577965942E-05"
+        ixz="-0.000192395857498769"
+        iyy="0.0126844944346296"
+        iyz="-0.000801418764696671"
+        izz="0.0015031381217481" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arcmate_100ib/meshes/Link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arcmate_100ib/meshes/Link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4"
+    type="revolute">
+    <origin
+      xyz="0.075053 0.064977 0.2791"
+      rpy="0 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 -0.067993 0.99769" />
+    <limit
+      lower="-6.63"
+      upper="6.63"
+      effort="0"
+      velocity="6.98" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="-1.01120764514628E-06 2.95550514073373E-06 9.84229228413736E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.174245928963413" />
+      <inertia
+        ixx="0.000106355815697029"
+        ixy="-1.7563781749769E-06"
+        ixz="-1.2203655782134E-07"
+        iyy="8.97576917558908E-05"
+        iyz="1.67324080941003E-08"
+        izz="8.96742062021525E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arcmate_100ib/meshes/Link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arcmate_100ib/meshes/Link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J5"
+    type="revolute">
+    <origin
+      xyz="0 -0.011538 0.1693"
+      rpy="0 0 0" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="-0.99454 -0.10408 -0.0070928" />
+    <limit
+      lower="-4.89"
+      upper="4.89"
+      effort="0"
+      velocity="6.98" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="-6.14800296924109E-05 -0.000754526784707221 0.0179219629621378"
+        rpy="0 0 0" />
+      <mass
+        value="0.067879772900139" />
+      <inertia
+        ixx="1.7737389805009E-05"
+        ixy="-1.63081656141632E-08"
+        ixz="3.67066151321029E-09"
+        iyy="1.77527052454988E-05"
+        iyz="1.05104519032918E-07"
+        izz="2.0146304134455E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arcmate_100ib/meshes/Link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arcmate_100ib/meshes/Link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J6"
+    type="revolute">
+    <origin
+      xyz="0.00044239 -0.0062556 0.02976"
+      rpy="0 0 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0.0026344 0.042913 -0.99908" />
+    <limit
+      lower="-12.57"
+      upper="12.57"
+      effort="0"
+      velocity="8.73" />
+  </joint>
+</robot>
